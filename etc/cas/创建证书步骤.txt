@@ -1,0 +1,36 @@
+﻿1、进入某个目录，shift+右键->在此处打开命令窗口
+
+2、keytool -genkey -alias cas.server.com -keyalg RSA -keystore casServer.keystore
+
+3、配置
+输入密钥库口令: test123
+再次输入新口令: test123
+您的名字与姓氏是什么?
+  [Unknown]:  cas.server.com
+您的组织单位名称是什么?
+  [Unknown]:  test
+您的组织名称是什么?
+  [Unknown]:  test
+您所在的城市或区域名称是什么?
+  [Unknown]:  shenzhen
+您所在的省/市/自治区名称是什么?
+  [Unknown]:  guangdong
+该单位的双字母国家/地区代码是什么?
+  [Unknown]:  sz
+CN=cas.server.com, OU=test, O=test, L=shenzhen, ST=guangdong, C=sz是否正确?
+  [否]:  y
+输入 <cas.server.com> 的密钥口令
+(如果和密钥库口令相同, 按回车):  test123
+再次输入新口令:  test123
+
+4、把密钥库导出成证书文件
+keytool -export -alias cas.server.com -keystore casServer.keystore -file casServer.crt -storepass test123
+
+5、查看证书
+keytool -printcert -file casServer.crt
+
+6、将创建过的证书导入到java证书库
+keytool -import -keystore "C:\Program Files\Java\jdk1.8.0_111\jre\lib\security\cacerts" -file "E:\etc\cas\casServer.crt" -alias cas.server.com
+
+如果导入失败，可能权限不够，进入C:\Program Files\Java\jdk1.8.0_111\jre\lib\security\目录，再执行
+keytool -import -keystore ./cacerts -file "E:\etc\cas\casServer.crt" -alias cas.server.com

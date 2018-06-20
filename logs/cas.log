@@ -1,0 +1,37 @@
+2018-06-20 10:00:34,180 INFO [org.apereo.cas.web.flow.login.InitialFlowSetupAction] - <Setting path for cookies for warn cookie generator to: [/cas/] >
+2018-06-20 10:00:34,248 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: audit:unknown
+WHAT: [event=success,timestamp=Wed Jun 20 10:00:34 CST 2018,source=RankedAuthenticationProviderWebflowEventResolver]
+ACTION: AUTHENTICATION_EVENT_TRIGGERED
+APPLICATION: CAS
+WHEN: Wed Jun 20 10:00:34 CST 2018
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2018-06-20 10:02:27,807 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: admin
+WHAT: Supplied credentials: [UsernamePasswordCredential(username=admin)]
+ACTION: AUTHENTICATION_SUCCESS
+APPLICATION: CAS
+WHEN: Wed Jun 20 10:02:27 CST 2018
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
+2018-06-20 10:02:28,039 INFO [org.apereo.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - <Audit trail record BEGIN
+=============================================================
+WHO: admin
+WHAT: TGT-1-********************************************************-34YISJytEgDIY-20170222TLQ
+ACTION: TICKET_GRANTING_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Wed Jun 20 10:02:28 CST 2018
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+>
